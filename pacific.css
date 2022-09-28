@@ -27,30 +27,35 @@ body {
 	color: #666666;
 	font-family: Arial, Helvetica, sans-serif;
 	background-size: contain;
+	min-height: 100%;
 }
 #wrapper{
-	display: grid;			/* Use grid display for layout */
+	display: grid;			/* Grid display for header, nav, footer layout */
 	grid-template-columns: .1fr 1fr;
 	grid-template-rows: 0.5fr 2.5fr .3fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	width: 80%;
-	height: 800px;
 	min-width: 600px;
+	height: 800px;
 	margin: auto;
 	box-sizing: border-box;
+	background-color: white;	/* Adds white background to footer */
 }
-#wrapper nav{
+nav{
 	grid-area: 2 / 1 / 5 / 2;
-	width: 50px;
+	width: 200px;
 	background-color: lightskyblue;
 }
-#wrapper nav ul {
+nav ul {
 	font-size: 1.2em;
+	list-style-type: none; 			/* Removes bullet points */
+	padding-left: 20px;
 }
-#wrapper nav a{
+nav a{
 	font-weight: bold;
 	text-decoration: none;			/* Removes underlines */
+	color: #000033;
 }
 #content{
 	grid-area: 2 / 2 / 3 / 3;
@@ -58,18 +63,20 @@ body {
 	padding-right: 10px;
 	background: white;
 }
-#content ul li{ 				/* Only targets the bullet points of this div and applys gif image */
-	list-style-image: url(marker.gif);
-	font-size: 1.1em;
+#content li, p{
+	font-size: 1.3em;
 }
 #content img{
 	float: left;
 	margin-right: 30px;
 	width: 480px;
 }
-#content p{
-	text-align: justify;
-	font-size: 1.1em;
+#content li::marker{
+	content: url(marker.gif);
+}
+.resort {						/* Changes color of these three words in paragraph */
+	color: rgb(97, 127, 181);
+	font-weight: bold;
 }
 nav a:visited {
 	color: #344873;
@@ -90,11 +97,13 @@ h2 {
 	font-family: Georgia, "Times New Roman", serif;
 }
 #contact {
-	font-size: 90%;
+	font-size: 1.3em;
 }
 dt {
 	color: #000033;
 }
 footer {
 	font-family: Georgia, "Times New Roman", serif;
+	grid-area: 3 / 2 / 4 / 3;
+	padding-left: 30px;
 }
