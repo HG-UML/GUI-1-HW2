@@ -1,0 +1,100 @@
+/*
+File: pacific.css
+GUI Assignment: Style a Site with External CSS
+
+Hannah Guillen, UMass Lowell Computer Science, hguillen@cs.uml.edu
+Copyright (c) 2022 by Hannah Guillen. All rights reserved. May be freely
+copied or excerpted for educational purposes with credit to the author.
+updated by HG on September 27, 2022 at 11:08 PM
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+header{
+	background-image: url(sunset.jpg);	/* Adds jpg background to header */
+	background-repeat: no-repeat;		/* Stops jpg from repeating */
+	background-size: cover;
+	grid-area: 1 / 1 / 2 / 6;
+}
+header h1{
+	font-size: 2.5em;
+	color: white;						/* Changes text color to white */
+}
+body {
+	background: url(ptrbackground.jpg);	/* Adds background image provided */
+	background-color: #00569f;			/* Solid color below the gradient */
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	background-size: contain;
+}
+#wrapper{
+	display: grid;			/* Use grid display for layout */
+	grid-template-columns: .1fr 1fr;
+	grid-template-rows: 0.5fr 2.5fr .3fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	width: 80%;
+	height: 800px;
+	min-width: 600px;
+	margin: auto;
+	box-sizing: border-box;
+}
+#wrapper nav{
+	grid-area: 2 / 1 / 5 / 2;
+	width: 50px;
+	background-color: lightskyblue;
+}
+#wrapper nav ul {
+	font-size: 1.2em;
+}
+#wrapper nav a{
+	font-weight: bold;
+	text-decoration: none;			/* Removes underlines */
+}
+#content{
+	grid-area: 2 / 2 / 3 / 3;
+	padding-left: 30px;
+	padding-right: 10px;
+	background: white;
+}
+#content ul li{ 				/* Only targets the bullet points of this div and applys gif image */
+	list-style-image: url(marker.gif);
+	font-size: 1.1em;
+}
+#content img{
+	float: left;
+	margin-right: 30px;
+	width: 480px;
+}
+#content p{
+	text-align: justify;
+	font-size: 1.1em;
+}
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+}
+h2 {
+	color: #3399CC;
+	font-size: 2em;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+}
+dt {
+	color: #000033;
+}
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+}
