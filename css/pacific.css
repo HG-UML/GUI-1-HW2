@@ -1,3 +1,17 @@
+/*
+Hannah Guillen, UMass Lowell Computer Science
+  hannah_guillen@student.uml.edu, hguillen@cs.uml.edu
+Date: September 27, 2022
+Last edited on: February 28, 2023
+File: pacific.css
+GUI Assignment: Creating an Interactive Dynamic Table
+  This file is the main CSS page.
+
+Copyright (c) 2022 by Hannah Guillen. All rights reserved. May be freely
+copied or excerpted for educational purposes with credit to the author.
+--> 
+*/
+
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 	display: block;
 }
